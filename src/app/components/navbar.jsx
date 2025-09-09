@@ -22,7 +22,7 @@ const Navbar = () => {
         rel="stylesheet"
       />
 
-      <nav className="w-full top-0 z-50 transition-all duration-300 py-4 bg-gradient-to-r from-[#383b1e] via-[#444724] to-[#4a4e28] backdrop-blur-md shadow-lg">
+      <nav className="w-full top-0 z-50 transition-all duration-300 py-4 bg-gradient-to-b from-[#383b1e] via-[#444724] to-[#4a4e28] backdrop-blur-md shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-white hover:text-emerald-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-emerald-900 rounded-lg"
+                className="p-2 text-white hover:text-emerald-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:[#575b3e] focus:ring-offset-2 focus:ring-offset-[#575b3e] rounded-lg"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? (
@@ -76,7 +76,7 @@ const Navbar = () => {
               : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
-          <div className="px-4 pt-4 pb-6 bg-gradient-to-b from-emerald-900/95 to-green-900/95 backdrop-blur-lg border-t border-emerald-700/50">
+          <div className="px-4 pt-4 pb-6 mt-5 bg-gradient-to-b from-[#3b3e1f] via-[#444724] to-[#4a4e28] backdrop-blur-lg">
             <div className="space-y-2">
               {navigationItems.map((item, index) => (
                 <a
@@ -98,10 +98,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      {/* Spacer to prevent content from hiding under fixed navbar.
-          Adjusted to a consistent h-24 (6rem) to match the new fixed navbar height. */}
-      <div className="h-24"></div>
 
       <style jsx>{`
         @keyframes slideInLeft {
