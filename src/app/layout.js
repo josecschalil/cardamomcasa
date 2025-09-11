@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import LuxuryBookingWidget from "./components/pre-footer";
-
+import NavbarWrapper from "./components/navbarWrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        <NavbarWrapper />
         {children}
         <LuxuryBookingWidget />
         <Footer />

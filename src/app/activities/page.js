@@ -62,7 +62,7 @@ const ActivitiesWidget = () => {
               </h2>
 
               <p
-                className="text-gray-600 text-base sm:text-lg leading-relaxed"
+                className="text-gray-600 text-base sm:text-md leading-relaxed"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Embark on thrilling adventures with our range of activities.

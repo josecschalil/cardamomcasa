@@ -50,8 +50,8 @@ const CardamomCasa = () => {
             that greets you each morning, and in the golden light of sunrise as
             it spills over the peaks, bringing with it a new chapter of profound
             tranquility. It is more than a resort; it is an escape into the very
-            lap of luxury and nature's most magnificent wonders—a place where
-            memories are cultivated, and serenity is harvested.
+            lap of luxury and nature&apos;s most magnificent wonders—a place
+            where memories are cultivated, and serenity is harvested.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const CardamomCasa = () => {
           </p>
 
           <p className="text-gray-700 text-base leading-relaxed">
-            Cardamom Casa is more than a destination; it's a promise of
+            Cardamom Casa is more than a destination; it&apos;s a promise of
             rejuvenation, adventure, and the beauty of Bison Valley. Join us in
             this journey, where every moment becomes a cherished memory. Welcome
             to a world where nature and luxury intertwine – welcome to Cardamom

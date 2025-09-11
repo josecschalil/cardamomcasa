@@ -1,103 +1,159 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import GalleryOfSerenity from "./gallery/page";
+import ActivitiesWidget from "./activities/page";
+import FeaturedSection from "./components/featured";
 
-export default function Home() {
+const CardamomCasaHero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { name: "HOME", href: "/" },
+    { name: "ABOUT", href: "/about" },
+    { name: "GALLERY", href: "/gallery" },
+    { name: "ACTIVITIES", href: "/activities" },
+    { name: "ATTRACTIONS", href: "/attractions" },
+    { name: "CONTACT", href: "/contact" },
+  ];
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            className="w-full h-full object-cover brightness-75"
+            src="https://cardamomcasa.com/wp-content/uploads/2023/12/cardamom.jpg"
+            alt="Cardamom Casa Villa"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/15 bg-opacity-20"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+
+        <nav className="w-full top-0 z-50 transition-all duration-300 py-4  bg-black/1 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <div className="flex-shrink-0 group">
+                <img
+                  src="https://cardamomcasa.com/wp-content/uploads/2023/12/logo-cardamam-2.jpg"
+                  alt="Cardamom Casa"
+                  className="transition-all duration-300 group-hover:scale-105 h-18 w-auto object-contain shadow-lg"
+                />
+              </div>
+
+              {/* Desktop Navigation */}
+              <div className="hidden lg:flex items-center space-x-1">
+                {navigationItems.map((item, index) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-6 py-2 font-inter font-medium text-sm tracking-wider transition-all duration-300 group `}
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <span className="relative z-10">{item.name}</span>
+                    <div
+                      className={`absolute inset-0 rounded-3xl  opacity-20 transform scale-95 group-hover:scale-100 transition-all duration-300 ${
+                        item.name === "HOME" ? "bg-gray-400" : ""
+                      }`}
+                    ></div>
+                  </a>
+                ))}
+              </div>
+
+              {/* Mobile menu button */}
+              <div className="lg:hidden ">
+                <button
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="p-2 text-white hover:text-emerald-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#575b3e] focus:ring-offset-2 focus:ring-offset-[#575b3e] rounded-lg"
+                  aria-label="Toggle menu"
+                >
+                  {isMenuOpen ? (
+                    <X className="h-6 w-6" />
+                  ) : (
+                    <Menu className="h-6 w-6" />
+                  )}
+                </button>
+                {isMenuOpen && (
+                  <div className="absolute top-full left-0 right-0 bg-white/1 backdrop-blur-lg lg:hidden rounded-lg mt-3 mx-3 shadow-lg">
+                    <div className="px-6 py-4 space-y-4">
+                      {navigationItems.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="block text-white hover:text-green-300 transition-colors duration-300 text-sm py-1 font-medium tracking-wide"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <style jsx>{`
+          @keyframes slideInLeft {
+            from {
+              opacity: 0;
+              transform: translateX(-20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        `}</style>
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-250px)] text-center px-6">
+          <div className="max-w-4xl">
+            {/* Welcome Text */}
+            <p className="text-white text-lg md:text-xl font-light italic mb-6 opacity-90">
+              Welcome to Cardamom Casa
+            </p>
+
+            {/* Main Heading */}
+            <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-tight">
+              Where views meet
+              <br />
+              <span className="block">luxury.</span>
+            </h1>
+          </div>
+        </div>
+
+        {/* Scroll Indicator - Optional */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="animate-bounce">
+            <svg
+              className="w-6 h-6 text-white opacity-70"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <FeaturedSection />
+      <GalleryOfSerenity />
+      <ActivitiesWidget />
+    </>
   );
-}
+};
+
+export default CardamomCasaHero;
