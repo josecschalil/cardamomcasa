@@ -4,7 +4,15 @@ import { Menu, X } from "lucide-react";
 import GalleryOfSerenity from "./gallery/page";
 import ActivitiesWidget from "./activities/page";
 import FeaturedSection from "./components/featured";
-
+import { Playfair, Merriweather } from "next/font/google";
+const playfair = Playfair({
+  weight: "600",
+  subsets: ["latin"],
+});
+const merriweather = Merriweather({
+  weight: "900",
+  subsets: ["latin"],
+});
 const CardamomCasaHero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,11 +32,9 @@ const CardamomCasaHero = () => {
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover brightness-75"
-            src="https://cardamomcasa.com/wp-content/uploads/2023/12/cardamom.jpg"
+            src="https://cardamomcasa.com/wp-content/uploads/2024/05/SAI07747.jpg"
             alt="Cardamom Casa Villa"
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/15 bg-opacity-20"></div>
         </div>
 
         <link
@@ -117,15 +123,19 @@ const CardamomCasaHero = () => {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-250px)] text-center px-6">
           <div className="max-w-4xl">
             {/* Welcome Text */}
-            <p className="text-white text-lg md:text-xl font-light italic mb-6 opacity-90">
+            <p
+              className={`text-white text-xl md:text-2xl font-medium italic  opacity-90 ${playfair.className}`}
+            >
               Welcome to Cardamom Casa
             </p>
 
             {/* Main Heading */}
-            <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-tight">
-              Where views meet
+            <h1
+              className={`text-white text-4xl md:text-6xl lg:text-7xl font-light leading-tight ${merriweather.className} mt-4`}
+            >
+              Where Views Meet
               <br />
-              <span className="block">luxury.</span>
+              <span className="block">Luxury.</span>
             </h1>
           </div>
         </div>

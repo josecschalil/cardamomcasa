@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Lora } from "next/font/google";
 import {
   X,
   ChevronLeft,
@@ -8,7 +9,10 @@ import {
   Search,
   Share2,
 } from "lucide-react";
-
+const lora = Lora({
+  weight: "600",
+  subsets: ["latin"],
+});
 const GalleryOfSerenity = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -100,20 +104,19 @@ const GalleryOfSerenity = () => {
         <div className="max-w-7xl mx-auto">
           {/* Gallery Title */}
           <h2
-            className="text-3xl sm:text-3xl lg:text-4xl font-medium text-gray-800 mb-12"
-            style={{ fontFamily: "Playfair Display, serif" }}
+            className={`text-3xl sm:text-3xl lg:text-4xl text-[#173F29] font-medium mb-12  ${lora.className}`}
           >
             A Gallery of Serenity
           </h2>
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+          <div className="flex flex-col gap-4 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 md:auto-rows-[250px]">
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
-                className={`${getSizeClasses(
+                className={`group cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-64 md:h-auto md:${getSizeClasses(
                   image.size
-                )} group cursor-pointer overflow-hidden  shadow-lg hover:shadow-2xl transition-all duration-300`}
+                )}`}
                 onClick={() => openModal(image, index)}
               >
                 <div className="relative w-full h-full">
