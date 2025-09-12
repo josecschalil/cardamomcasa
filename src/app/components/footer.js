@@ -158,7 +158,7 @@ const Footer = () => {
         <div className="border-t border-gray-700">
           <div className="max-w-7xl mx-auto px-6 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-              <p className="mb-2 md:mb-0">Powered by Inventiv Hub</p>
+              <p className="mb-2 md:mb-0">Powered by Primewave.Inc</p>
               <p>Copyright © 2023 Cardamom Casa. All rights reserved.</p>
             </div>
           </div>
