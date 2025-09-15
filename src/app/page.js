@@ -10,13 +10,7 @@ const CardamomCasaHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Luxury hotel/villa images for carousel
-  const carouselImages = [
-    "https://cardamomcasa.com/wp-content/uploads/2024/05/SAI07747.jpg",
-    "https://cardamomcasa.com/wp-content/uploads/2023/12/cardamom.jpg",
-    "https://lh3.googleusercontent.com/rd-d/ALs6j_HwZL43jLzgncb_8hg3_J-0NQHRxY57N9zIxwAiD0kAgMZFMONFIq0ELfk7aBSETUlsxXnPh-rQ3gIu6PZSxDe1znsM7fResNjOtco1IQ0ZhlySnTeuKwSFFWSXJA1BbZkht5UTxYdstWApNB8LBsFpZCnQEm1vL4kftOlpvTllxm6em7lfSxz3cCaiH9qm0fon8YNZAejzwzU8xxJGso0BsYRp56zNKb2GRevjhOUI1tq6wc3LC4BZ4jPg3bCU26_6F-vRR871TvJrxT9JV0jq10FOXOQZ9zBLMsFySTnWiXUmHJRdPudvdTerYlo9T9viSRAqq3iLpyveTyFm6hqssqk37BDLdncN52T4N06j1Y2sLaRNPypdm_r--0izVZixSQfpg6RdpveJ55LkYMHstx5H-q0HWwbMLIAYje-BBp4hGDmp-rVMRftSBiG1BYGBgbKXop6i7k1vEdfaA6FPByjXZi-dpJPYgvSr9PgDvg_3g2yKX8s0HZE-Fob_ztsWmeYGZktKQaqH3cE7P6Wa75vS-g_Vp8YVc1o1eWPGtR8r5I-8y6KcHhIy6x97nXsA187owImdJPhZ9nqjK8un52-Wodc87oJUIZEPUBgsqAFddETsW7qNkTPRZf7Fd1vh7csGFCZOeBoagjx7ro8wn57AGv_hbA3Fa3cyCYSz1sh0sS9NTqh21mY9aaUmR1YWbgx_kCKjxRBicxZOCokw20q8MHZiN_ibOPW6OLz2FxPJBdN0n2qTkA1xsHqodm-3k_5jisTcY4To6HNHeG6RTmpAKR0KFkzZbzc4ICZJ6Cx7Pmqaf3aImVGQYWmtlyc81dQg6q5JojLW3oqHev5zdOXzV_57Dz_16JBzjfEY3VKeJ4YaoJjYRWsDEf9rAuNllq2JNHRtItpsDkEG0WX8q4fRT0LowNJAj_pmU50z7Y8JmY2xuxlTs3p4XvV-pe9ROIhA4MLphiJMXK18TdznIA=w1213-h968?auditContext=prefetch",
-    "https://lh3.googleusercontent.com/rd-d/ALs6j_HAHdr-Fw-Yl3irrQM7gidt6Nxueas3iXQvaAUS7BFaOxP30Ib18NNs-bNGjI5zMh8-WxezQF_y3lZsMAomZdpW1LwItTyHfLaPM-cSLdgIMH-eO4YkOuHfSPK-tfw0B3a8WSrmvSffbdz4GhhAgp3CNETkSLXXiBafaxJmwGM8Le6I3ZmcST1GUmnqMEAwcJpX9BOSGudrX3mrpXJMTsGrf4VGRINTesArlXgS7xKrkkPnfeE6ER-ll5VtOXhbB9NHiO3_jYf4FuznEwLJ92-7knFFsUtJSgR0EyHj7qQ6P4dlztltyRm0ENon-ZPmCPFVuywpCD6rnXjq3lEAppcKXdAtnKS5Bx4oM4Onolr8dj3eGwFPSTpsHwTfYMUuibSYwOeEvyhEl8YuR8JlbZPKELMauZQ2PncHqr96AiLsP4HvTY79rEmPGEKHzEiVJkDw7kShFhYvxvUkxALcGRsqt-evP0mZln8MFsx5JxevRHwdOEjQgJCp-05dcx81ALanCQPxxg2TEV_iYnXDlmI4jTaIpZxaNmhYEHmQ38bLR6LkcBfAnZDuvbjgl3BpWLs2F4L5shlK6NYW5DE2M7MepZk8g6lXGKUnSxqCrL_1M5Kr2EOHEgiPgHQzmWtuovwK6xUYJmK73yCNebV0XAduthZSPOfjunULuwQ6RRWPLgaNXUzKjhrYXctZsj2skcRlLj-rZfpgITts0gd0X2AfsC2ucjVmLyvkRMIZnuCVMJvJh3BmEzz3CBxErF4gmZib6LkL_OW3AvUzJJ5T8pqiwdulIiiRI4jUA3KXY8LpU5WeRklZmw2UQvXelHWDQf5-QCnNj-6BRcZ6om7VnvCN7-I-bhOhC9He6BKoYumpzWwdiDDCf9rKzZtk7e1UC57epP_j06tDggymp6Rmi10F3ChDaszE3I9oZ47xS5f9F14YWiRfon_hKIhY_vp4tw_7kl4PdNY44oDQ_ok1e5tA4g=w1213-h968?auditContext=forDisplay",
-  ];
-
+  const carouselImages = ["/1.jpg", "/2.jpg", "/5.jpg", "/12.jpg"];
   const navigationItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
@@ -101,7 +95,7 @@ const CardamomCasaHero = () => {
 
       <div className="relative min-h-screen overflow-hidden">
         {/* Image Carousel Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 ">
           {carouselImages.map((image, index) => (
             <div
               key={index}
@@ -150,7 +144,7 @@ const CardamomCasaHero = () => {
         </div>
 
         {/* Enhanced Navigation */}
-        <nav className="w-full top-0 z-50 transition-all duration-300 py-4  bg-black/1 relative">
+        <nav className="w-full top-0 z-50 transition-all duration-300 py-4  bg-black/50 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="flex items-center justify-between">
               {/* Logo */}
@@ -216,8 +210,8 @@ const CardamomCasaHero = () => {
         </nav>
 
         {/* Enhanced Hero Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-6">
-          <div className="max-w-5xl">
+        <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-6 bg-black/50">
+          <div className="max-w-5xl ">
             {/* Luxury Accent Line */}
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-8 mx-auto"></div>
 
