@@ -35,8 +35,8 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
               <h3
-                className="text-white text-lg font-medium mb-6 italic"
-                style={{ fontFamily: "Playfair Display, serif" }}
+                className="text-white text-lg font-light mb-6 "
+                style={{ fontFamily: "serif" }}
               >
                 Quick Link
               </h3>
@@ -79,8 +79,8 @@ const Footer = () => {
             {/* Contact Information */}
             <div>
               <h3
-                className="text-white text-lg font-medium mb-6 italic"
-                style={{ fontFamily: "Playfair Display, serif" }}
+                className="text-white text-lg font-light mb-6 "
+                style={{ fontFamily: "serif" }}
               >
                 Contact Information
               </h3>
@@ -111,8 +111,8 @@ const Footer = () => {
             {/* Connect with Us */}
             <div>
               <h3
-                className="text-white text-lg font-medium mb-6 italic"
-                style={{ fontFamily: "Playfair Display, serif" }}
+                className="text-white text-lg font-light mb-6"
+                style={{ fontFamily: "serif" }}
               >
                 Connect with Us
               </h3>
