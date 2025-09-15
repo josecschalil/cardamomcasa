@@ -77,7 +77,7 @@ const FeaturedSection = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 lg:py-24">
+    <section className="bg-gray-50 pt-16 pb-1 lg:pt-24 lg:pb-24 lg:px-25 ">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}

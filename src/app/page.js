@@ -149,14 +149,14 @@ const CardamomCasaHero = () => {
         {/* Carousel Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 group"
+          className="hidden md:block absolute left-6 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 group"
         >
-          <ChevronLeft className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+          <ChevronLeft className="h-6 w-6 text-white group-hover:scale-110 transition-transform " />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 group"
+          className="hidden md:block absolute right-6 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 group"
         >
           <ChevronRight className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
         </button>
