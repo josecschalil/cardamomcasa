@@ -4,6 +4,7 @@ import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import GalleryOfSerenity from "./gallery/page";
 import ActivitiesWidget from "./activities/page";
 import FeaturedSection from "./components/featured";
+
 const CardamomCasaHero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
