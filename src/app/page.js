@@ -55,6 +55,39 @@ const CardamomCasaHero = () => {
           font-family: "Inter", sans-serif;
         }
 
+        /* Mobile font weight overrides */
+        @media (max-width: 768px) {
+          .luxury-text {
+            font-weight: 600 !important;
+          }
+
+          .elegant-text {
+            font-weight: 600 !important;
+          }
+
+          .modern-text {
+            font-weight: 500 !important;
+          }
+
+          /* Override specific text elements for mobile */
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-weight: 600 !important;
+          }
+
+          p {
+            font-weight: 500 !important;
+          }
+
+          a {
+            font-weight: 500 !important;
+          }
+        }
+
         .slide-enter {
           opacity: 0;
           transform: scale(1.1);
@@ -210,13 +243,13 @@ const CardamomCasaHero = () => {
         </nav>
 
         {/* Enhanced Hero Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-6 bg-black/50">
+        <div className="relative z-20 flex flex-col items-center justify-start min-h-screen text-center px-6 bg-black/50 py-25 sm:py-32 ">
           <div className="max-w-5xl ">
             {/* Luxury Accent Line */}
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-8 mx-auto"></div>
 
             {/* Welcome Text */}
-            <p className="text-yellow-200 text-lg md:text-xl elegant-text font-light italic tracking-widest uppercase opacity-90 mb-6 text-shadow-luxury">
+            <p className="text-yellow-200 text-lg md:text-xl elegant-text font-light   tracking-widest uppercase opacity-90 mb-6 text-shadow-luxury">
               Welcome to
             </p>
 
@@ -229,9 +262,7 @@ const CardamomCasaHero = () => {
             {/* Tagline */}
             <h2 className="text-white text-xl md:text-3xl lg:text-4xl luxury-text font-light leading-relaxed mb-8 text-shadow-luxury">
               Where Elegance Meets
-              <span className="block italic text-yellow-200">
-                Breathtaking Views
-              </span>
+              <span className="block  text-yellow-200">Breathtaking Views</span>
             </h2>
 
             {/* Divider */}
