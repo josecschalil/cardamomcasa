@@ -243,8 +243,8 @@ const CardamomCasaHero = () => {
 
             {/* Subtitle */}
             <p className="text-white/90 text-sm md:text-base elegant-text font-normal leading-relaxed max-w-2xl mx-auto mb-8 text-shadow-luxury">
-              Experience unparalleled luxury in the heart of nature's paradise.
-              Your exclusive retreat awaits.
+              Experience unparalleled luxury in the heart of nature&apos;s
+              paradise. Your exclusive retreat awaits.
             </p>
           </div>
         </div>
