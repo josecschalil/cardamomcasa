@@ -83,7 +83,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-emerald-800/50 rounded-lg font-inter font-medium text-base tracking-wide transition-all duration-200 transform hover:translate-x-2"
+                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-gray[200] rounded-lg font-inter font-medium text-base tracking-wide transition-all duration-200 transform hover:translate-x-2"
                   style={{
                     animationDelay: `${index * 50}ms`,
                     animation: isMenuOpen

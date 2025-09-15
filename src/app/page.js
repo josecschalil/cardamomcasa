@@ -212,7 +212,7 @@ const CardamomCasaHero = () => {
               <div className="lg:hidden ">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="p-2 text-white hover:text-emerald-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#575b3e] focus:ring-offset-2 focus:ring-offset-[#575b3e] rounded-lg"
+                  className="p-2 text-white hover:text-gray[200] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#575b3e] focus:ring-offset-2 focus:ring-offset-[#575b3e] rounded-lg"
                   aria-label="Toggle menu"
                 >
                   {isMenuOpen ? (
