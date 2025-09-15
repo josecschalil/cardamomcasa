@@ -58,7 +58,7 @@ const NearestAttractions = () => {
 
             {/* Hero Image */}
             <img
-              src="https://cardamomcasa.com/wp-content/uploads/2023/12/green-hills-of-kolukkumalai-tea-plantations-in-mun-2023-11-27-05-04-57-utc-768x256.jpg"
+              src="/attractions.jpg"
               alt="Tea plantations in Munnar with rolling green hills"
               className="w-full h-64 sm:h-80 lg:h-96 object-cover"
             />

@@ -16,10 +16,7 @@ const CardamomCasa = () => {
         {/* Right - House Image */}
         <div className="flex justify-end">
           <div className="w-full h-64 lg:h-80  rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="https://cardamomcasa.com/wp-content/uploads/2023/12/cardamom.jpg"
-              className="object-cover w-full h-full"
-            />
+            <img src="/cardamom.jpg" className="object-cover w-full h-full" />
           </div>
         </div>
       </div>
@@ -72,10 +69,7 @@ const CardamomCasa = () => {
 
       {/* Full Width Bottom Image */}
       <div className="w-full h-96 lg:h-[500px] relative overflow-hidden mt-8 pb-8 bg-white">
-        <img
-          src="https://cardamomcasa.com/wp-content/uploads/2023/12/pano.jpg"
-          className="w-full h-full object-cover"
-        />
+        <img src="/pano.jpg" className="w-full h-full object-cover" />
       </div>
     </div>
   );

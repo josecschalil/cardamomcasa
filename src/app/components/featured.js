@@ -130,7 +130,7 @@ const FeaturedSection = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://cardamomcasa.com/wp-content/uploads/2023/12/sl.jpg" // Replace with your image path
+                src="/sl.jpg" // Replace with your image path
                 alt="Cardamom Casa Villa"
                 className="w-full h-[400px] lg:h-[600px] object-cover"
               />

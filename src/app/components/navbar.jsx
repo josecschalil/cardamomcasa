@@ -1,9 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Ensures client-only code runs after hydration
+    setMounted(true);
+  }, []);
 
   const navigationItems = [
     { name: "HOME", href: "/" },
@@ -28,9 +34,8 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 group">
               <img
-                src="https://cardamomcasa.com/wp-content/uploads/2023/12/logo-cardamam-2.jpg"
+                src="/logo.jpg"
                 alt="Cardamom Casa"
-                // The logo height is now fixed to h-16 (4rem) and doesn't change.
                 className="transition-all duration-300 group-hover:scale-105 h-16 w-auto object-contain shadow-lg"
               />
             </div>
@@ -41,11 +46,11 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="relative px-6 py-2 text-white/90 hover:text-white font-inter font-medium text-sm tracking-wider transition-all duration-300 group"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`relative px-6 py-2 text-white/90 hover:text-white font-inter font-medium text-sm tracking-wider transition-all duration-300 group ${
+                    mounted ? `delay-[${index * 100}ms]` : ""
+                  }`}
                 >
                   <span className="relative z-10">{item.name}</span>
-                  {/* Hover effect */}
                   <div className="absolute inset-0 bg-[#575b3e] rounded-3xl opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-all duration-300"></div>
                 </a>
               ))}
@@ -83,11 +88,10 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-gray[200] rounded-lg font-inter font-medium text-base tracking-wide transition-all duration-200 transform hover:translate-x-2"
+                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-gray-200/10 rounded-lg font-inter font-medium text-base tracking-wide transition-all duration-200 transform hover:translate-x-2"
                   style={{
-                    animationDelay: `${index * 50}ms`,
                     animation: isMenuOpen
-                      ? "slideInLeft 0.3s ease-out forwards"
+                      ? `slideInLeft 0.3s ease-out ${index * 50}ms forwards`
                       : "none",
                   }}
                 >

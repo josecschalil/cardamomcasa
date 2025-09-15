@@ -17,7 +17,7 @@ const Footer = () => {
             {/* Logo and Description */}
             <div className="lg:col-span-1">
               <img
-                src="https://cardamomcasa.com/wp-content/uploads/2023/12/logo-cardamam-2.jpg"
+                src="/logo.jpg"
                 alt="Cardamom Casa"
                 className={`transition-all duration-300 group-hover:scale-105 h-14 sm:h-16 mb-6 w-auto object-contain shadow-lg`}
               />

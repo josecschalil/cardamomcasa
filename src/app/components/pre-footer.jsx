@@ -13,7 +13,7 @@ const LuxuryBookingWidget = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://cardamomcasa.com/wp-content/uploads/2023/12/IMG_r3822.jpg')`,
+            backgroundImage: `url('/IMG_r3822.jpg')`,
           }}
         />
 
