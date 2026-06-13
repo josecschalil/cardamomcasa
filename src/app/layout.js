@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "./components/footer";
 import LuxuryBookingWidget from "./components/pre-footer";
 import NavbarWrapper from "./components/navbarWrapper";
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       >
         <NavbarWrapper />
         {children}
+        <Analytics />
         <LuxuryBookingWidget />
         <Footer />
       </body>
